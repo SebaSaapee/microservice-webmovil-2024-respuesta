@@ -14,8 +14,13 @@ export const ResponseSchema = new mongoose.Schema(
     {
         user_id: { type: mongoose.Schema.Types.ObjectId, ref: 'User', required: true }, // Referencia al usuario que responde el cuestionario
         cuestionario_id: { type: mongoose.Schema.Types.ObjectId, ref: 'Question', required: true }, // Referencia al cuestionario que está siendo respondido
-        respuestas: [RespuestaPreguntaSchema], // Array de respuestas a las preguntas del cuestionario
-    },
+        respuestas: [RespuestaPreguntaSchema],
+        patente: { type: String, required: true }, // Patente del vehículo
+        fecha_respuesta: { type: Date, default: Date.now }, // Fecha en la que se responde el cuestionario
+        geolocalizacion: {
+            latitud: { type: Number, required: true }, // Latitud de la ubicación
+            longitud: { type: Number, required: true }, // Longitud de la ubicación // Array de respuestas a las preguntas del cuestionario
+    }},
     { timestamps: true } // Añade createdAt y updatedAt
 );
 
