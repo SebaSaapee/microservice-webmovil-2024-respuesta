@@ -61,6 +61,7 @@ export class RespuestaService {
       patente: responseDTO.patente,
       fecha_respuesta: new Date(), // Fecha actual por defecto
       geolocalizacion: responseDTO.geolocalizacion,
+      foto: responseDTO.foto,
     });
 
     // Guarda la respuesta

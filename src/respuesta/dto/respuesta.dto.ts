@@ -4,6 +4,7 @@ export class RespuestaDTO {
   readonly respuestas: RespuestaPreguntaDTO[]; // Array de respuestas de las preguntas
   readonly patente: string; // Patente del vehículo utilizado
   readonly fecha_respuesta: Date; // Fecha en que se respondió el cuestionario
+  readonly foto: string; 
   readonly geolocalizacion: {
     latitud: number; // Latitud de la ubicación
     longitud: number; // Longitud de la ubicación

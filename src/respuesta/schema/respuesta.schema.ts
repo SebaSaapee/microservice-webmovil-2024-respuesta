@@ -17,6 +17,7 @@ export const ResponseSchema = new mongoose.Schema(
         respuestas: [RespuestaPreguntaSchema],
         patente: { type: String, required: true }, // Patente del vehículo
         fecha_respuesta: { type: Date, default: Date.now }, // Fecha en la que se responde el cuestionario
+        foto:{ type: String, required: false },
         geolocalizacion: {
             latitud: { type: Number, required: true }, // Latitud de la ubicación
             longitud: { type: Number, required: true }, // Longitud de la ubicación // Array de respuestas a las preguntas del cuestionario
